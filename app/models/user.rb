@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+	has_one :profile
+	has_many :donations
+
   	attr_accessor :pre_password, :password
 
   	validates_presence_of :pre_password, :message => "Password can't be blank"
